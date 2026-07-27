@@ -1,0 +1,76 @@
+.currency-shell {
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 42%),
+    linear-gradient(160deg, #07111d 0%, #0b1a2b 52%, #071018 100%);
+}
+
+.currency-panel {
+  width: min(880px, 100%);
+}
+
+.converter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1fr;
+  gap: 14px;
+  margin-top: 24px;
+  align-items: end;
+}
+
+.converter-grid label {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.converter-grid span {
+  color: #bfdbfe;
+  font-size: 0.9rem;
+}
+
+.converter-grid input,
+.converter-grid select {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.swap-button {
+  height: 52px;
+  min-width: 84px;
+  border: 0;
+  border-radius: 16px;
+  font-weight: 800;
+  color: #08111f;
+  background: linear-gradient(135deg, #dbeafe, #93c5fd);
+}
+
+.result-card {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.result-card span,
+.result-card p {
+  color: #cbd5e1;
+}
+
+.result-card strong {
+  display: block;
+  margin: 12px 0 8px;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+@media (max-width: 820px) {
+  .converter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .swap-button {
+    width: 100%;
+  }
+}

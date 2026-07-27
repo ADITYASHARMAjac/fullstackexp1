@@ -1,0 +1,74 @@
+.stopwatch-shell {
+  background:
+    radial-gradient(circle at top, rgba(34, 197, 94, 0.18), transparent 40%),
+    linear-gradient(160deg, #06131f 0%, #0b1f2e 55%, #081018 100%);
+}
+
+.stopwatch-panel {
+  width: min(860px, 100%);
+}
+
+.time-ring {
+  width: min(320px, 100%);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  margin: 24px auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(14, 165, 233, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.time-ring span {
+  font-size: clamp(2.7rem, 8vw, 5.8rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  color: #cbd5e1;
+}
+
+.lap-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.lap-list article,
+.empty-state {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lap-list article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lap-list article span {
+  color: #93c5fd;
+}
+
+.lap-list article strong {
+  font-size: 1.2rem;
+}
+
+.controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+@media (max-width: 720px) {
+  .status-row,
+  .lap-list article {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

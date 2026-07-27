@@ -1,0 +1,105 @@
+.todo-shell {
+  background:
+    radial-gradient(circle at top, rgba(251, 146, 60, 0.2), transparent 40%),
+    linear-gradient(160deg, #17120f 0%, #23150e 52%, #120c09 100%);
+}
+
+.todo-panel {
+  width: min(860px, 100%);
+}
+
+.composer {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.composer input {
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 14px 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.summary-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+  color: #fed7aa;
+}
+
+.summary-row span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.task-list {
+  display: grid;
+  gap: 12px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.task input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+}
+
+.task.done span {
+  text-decoration: line-through;
+  color: #cbd5e1;
+}
+
+.empty-state {
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.ghost {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+}
+
+@media (max-width: 720px) {
+  .composer,
+  .task {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-actions {
+    justify-content: stretch;
+  }
+
+  .footer-actions button,
+  .task button,
+  .composer button {
+    width: 100%;
+  }
+}
